@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using WinFormClient.Alarms;
+using WinFormClient.Entities.Alarms;
+using WinFormClient.Entities.Devices;
 
 namespace WinFormClient
 {

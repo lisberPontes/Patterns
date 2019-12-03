@@ -1,7 +1,7 @@
 ﻿using System;
 using WinFormClient.EventArguments;
 
-namespace WinFormClient.Alarms
+namespace WinFormClient.Entities.Alarms
 {
 	public class Alarm
 	{

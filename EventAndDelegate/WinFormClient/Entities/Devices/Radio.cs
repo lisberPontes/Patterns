@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using WinFormClient.EventArguments;
 
-namespace WinFormClient
+namespace WinFormClient.Entities.Devices
 {
 	public class Radio
 	{
