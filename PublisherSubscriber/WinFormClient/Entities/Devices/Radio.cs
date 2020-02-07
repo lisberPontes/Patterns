@@ -3,11 +3,14 @@ using WinFormClient.EventArguments;
 
 namespace WinFormClient.Entities.Devices
 {
-	public class Tv
+	internal sealed class Radio
 	{
 		public void AlarmListener(object source, AlarmEventArgs args)
 		{
-			MessageBox.Show($@"TV (subscriber) - {args.Location} - sender:{source.ToString()}");
+			MessageBox.Show($@"Radio (subscriber) - {args.Location} - sender:{source}",
+				"Radio", 
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Information);
 		}
 	}
 }

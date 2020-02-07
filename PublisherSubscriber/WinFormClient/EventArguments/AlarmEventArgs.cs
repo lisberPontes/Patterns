@@ -2,7 +2,7 @@
 
 namespace WinFormClient.EventArguments
 {
-	public class AlarmEventArgs:EventArgs
+	internal sealed class AlarmEventArgs:EventArgs
 	{
 		public string Location { get; }
 

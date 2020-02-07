@@ -3,7 +3,7 @@ using WinFormClient.EventArguments;
 
 namespace WinFormClient.Entities.Alarms
 {
-	public class Alarm
+	internal sealed class Alarm
 	{
 		public event EventHandler<AlarmEventArgs> OnAlarmRaised = delegate { };
 

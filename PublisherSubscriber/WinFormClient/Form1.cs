@@ -5,26 +5,22 @@ using WinFormClient.Entities.Devices;
 
 namespace WinFormClient
 {
-	public partial class Form1 : Form
+	internal partial class Form1 : Form
 	{
 		#region Publisher
-		public Alarm Alarm { get; }
+		private Alarm Alarm { get; }
 		#endregion
 
 		#region Subscriber
-		public Tv Tv { get; }
-		public Radio Radio { get; }
+		private Tv Tv { get; } = new Tv();
+		private Radio Radio { get; } = new Radio();
 		#endregion
 
-		public Form1()
+		public Form1(Alarm alarm)
 		{
 			InitializeComponent();
 
-			Alarm = new Alarm();
-
-			Tv = new Tv(); 
-			Radio = new Radio();
-
+			Alarm = alarm;
 			Alarm.OnAlarmRaised += Tv.AlarmListener;
 			Alarm.OnAlarmRaised += Radio.AlarmListener;
 		}
@@ -32,6 +28,14 @@ namespace WinFormClient
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Alarm.RaiseAlarm(location:"Alarm raised from the main Form!");
+		}
+
+		protected override void OnClosed(EventArgs e)
+		{
+			Alarm.OnAlarmRaised -= Tv.AlarmListener;
+			Alarm.OnAlarmRaised -= Radio.AlarmListener;
+
+			base.OnClosed(e);
 		}
 	}
 }
