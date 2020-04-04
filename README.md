@@ -4,6 +4,8 @@
 		1 - ObserverPattern
 	2 - Structural Patterns
 		1 - Decorator
+	3 - Creational Patterns
+		1 - Builder
 
 2 - Architectural Patterns
 	1 - MvvmPattern (WPF implementation)
