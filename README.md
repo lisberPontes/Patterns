@@ -6,6 +6,7 @@
 		1 - Decorator
 	3 - Creational Patterns
 		1 - Builder
+		2 - Factory
 
 2 - Architectural Patterns
 	1 - MvvmPattern (WPF implementation)
