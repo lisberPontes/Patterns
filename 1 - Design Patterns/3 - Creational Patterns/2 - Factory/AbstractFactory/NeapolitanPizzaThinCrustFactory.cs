@@ -3,11 +3,11 @@ using Entities.Pizza;
 
 namespace AbstractFactory
 {
-    public class NeapolitanPizzaThickCrust : IPizzaFactory
+    public class NeapolitanPizzaThinCrustFactory:IPizzaFactory
     {
         public ICrust BuildCrust()
         {
-            var crust = new ThickCrust(typeof(ThickCrust).Name);
+            var crust = new ThinCrust(typeof(ThinCrust).Name);
 
             return crust;
         }

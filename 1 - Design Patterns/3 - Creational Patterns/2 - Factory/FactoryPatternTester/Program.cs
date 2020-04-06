@@ -1,4 +1,5 @@
 ﻿using System;
+using AbstractFactory;
 using Autofac;
 using Entities.Pizza;
 using FactoryPatternTester.IoC;
@@ -7,7 +8,6 @@ using FactoryPatternTester.SimpleFactory;
 using FactoryPatternTester.AbstractFactory;
 using FactoryMethodPizzaFactory = FactoryMethod.IPizzaFactory;
 using AbstractFactoryPizzaFactory = AbstractFactory.IPizzaFactory;
-using AbstractFactoryNeapolitanPizzaThickCrust = AbstractFactory.NeapolitanPizzaThickCrust;
 
 
 namespace FactoryPatternTester
@@ -40,7 +40,7 @@ namespace FactoryPatternTester
             //3 - AbstractFactory
             using (var scope = container.BeginLifetimeScope())
             {
-                var factory = scope.ResolveNamed<AbstractFactoryPizzaFactory>(typeof(AbstractFactoryNeapolitanPizzaThickCrust).Name);
+                var factory = scope.ResolveNamed<AbstractFactoryPizzaFactory>(typeof(NeapolitanPizzaThickCrustFactory).Name);
                 var factoryMethodClient = new AbstractFactoryClient(factory);
                 factoryMethodClient.BuildPizza();
             }

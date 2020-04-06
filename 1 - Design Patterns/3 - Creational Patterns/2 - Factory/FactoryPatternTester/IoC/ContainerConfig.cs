@@ -1,8 +1,8 @@
-﻿using Autofac;
+﻿using AbstractFactory;
+using Autofac;
 using FactoryMethod;
 using FactoryMethodPizzaFactory = FactoryMethod.IPizzaFactory;
 using AbstractFactoryIPizzaFactory = AbstractFactory.IPizzaFactory;
-using AbstractFactoryNeapolitanPizzaThickCrust = AbstractFactory.NeapolitanPizzaThickCrust;
 
 namespace FactoryPatternTester.IoC
 {
@@ -24,8 +24,8 @@ namespace FactoryPatternTester.IoC
 
         private static void AbstractFactoryDependencies(ContainerBuilder builder)
         {
-            builder.RegisterType<AbstractFactoryNeapolitanPizzaThickCrust>()
-                .Named<AbstractFactoryIPizzaFactory>(typeof(AbstractFactoryNeapolitanPizzaThickCrust).Name);
+            builder.RegisterType<NeapolitanPizzaThickCrustFactory>()
+                .Named<AbstractFactoryIPizzaFactory>(typeof(NeapolitanPizzaThickCrustFactory).Name);
         }
     }
 }
