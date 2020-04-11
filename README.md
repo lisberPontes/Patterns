@@ -4,6 +4,7 @@
 		1 - ObserverPattern
 	2 - Structural Patterns
 		1 - Decorator
+		2 - Bridge
 	3 - Creational Patterns
 		1 - Builder
 		2 - Factory
