@@ -3,6 +3,7 @@
    1. Behavioral Patterns
       1. Observer
       2. Memento
+      3. Command
    2. Structural Patterns
       1. Decorator
       2. Bridge
