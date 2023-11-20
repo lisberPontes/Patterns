@@ -38,4 +38,4 @@ jobs:
         run: cd $GITHUB_WORKSPACE
 
       - name: Build solution
-        run: msbuild Patterns/1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
+        run: msbuild 1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
