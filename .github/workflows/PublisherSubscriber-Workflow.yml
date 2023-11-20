@@ -6,8 +6,8 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    paths:
-      - 1-DesignPatterns/1-BehavioralPatterns/1-Observer/**
+    paths: ['1-DesignPatterns/1-BehavioralPatterns/1-Observer/**']
+      
   
   #push:
   #  branches: [ "master" ]
