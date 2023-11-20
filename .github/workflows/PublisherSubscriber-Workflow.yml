@@ -34,5 +34,8 @@ jobs:
       #- name: Restore Packages
       #  run: nuget restore ${{ github.workspace }}/Patterns/1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln
 
+      - name: Navigate to Workspace
+        run: cd $GITHUB_WORKSPACE
+
       - name: Build solution
         run: msbuild ${{ github.workspace }}/Patterns/1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
