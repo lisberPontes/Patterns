@@ -40,10 +40,10 @@ jobs:
         run: nuget restore 1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln
 
       - name: Build solution
-        run: msbuild 1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release --output upload/
+        run: msbuild 1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
 
       - name: publish files to artifact
         uses: actions/upload-artifact@v2
         with:
           name: ${{github.run_number}}
-          path: upload/**
+          path: 1-DesignPatterns/1-BehavioralPatterns/1-Observer/WinFormClient/bin/Release/**
