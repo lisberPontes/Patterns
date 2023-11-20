@@ -6,7 +6,7 @@ namespace WinFormClient.EventArguments
 	{
 		public string Location { get; }
 
-		public AlarmEventArgs2(string location)
+		public AlarmEventArgs3(string location)
 		{
 			Location = location;
 		}
