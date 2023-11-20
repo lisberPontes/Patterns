@@ -26,17 +26,17 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
 
-      #- name: Setup NuGet
-      #  uses: NuGet/setup-nuget@v1.0.5
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
   
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
 
-      #- name: Restore Packages
-      #  run: nuget restore ${{ github.workspace }}/Patterns/1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln
-
       - name: Navigate to Workspace
         run: cd $GITHUB_WORKSPACE
+
+      - name: Restore Packages
+        run: nuget restore 1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln
 
       - name: Build solution
         run: msbuild 1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
