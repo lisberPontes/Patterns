@@ -32,7 +32,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
 
       - name: Restore Packages
-        run: nuget restore ${{ github.workspace }}/Patterns/1 - Design Patterns/1 - Behavioral Patterns/1 - Observer/PublisherSubscriber.sln
+        run: nuget restore ${{ github.workspace }}/Patterns/1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln
 
       - name: Build solution
-        run: msbuild ${{ github.workspace }}/Patterns/1 - Design Patterns/1 - Behavioral Patterns/1 - Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
+        run: msbuild ${{ github.workspace }}/Patterns/1-DesignPatterns/1-BehavioralPatterns/1-Observer/PublisherSubscriber.sln -t:rebuild -property:Configuration=Release
