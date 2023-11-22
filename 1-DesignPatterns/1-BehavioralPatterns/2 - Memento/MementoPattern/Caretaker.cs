@@ -3,7 +3,7 @@ using MementoPattern.Mementos;
 
 namespace MementoPattern
 {
-    internal sealed class Caretaker
+    public sealed class Caretaker
     {
         private Stack<IMemento> UndoStack { get; }
         private Stack<IMemento> RedoStack { get; }

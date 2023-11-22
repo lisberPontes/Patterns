@@ -1,18 +1,21 @@
-﻿using MementoPattern;
+﻿using System;
 using System.ComponentModel;
-using MementoPattern.Mementos;
-using MementoPatternTester.Commands;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
-using MementoPatternTester.Annotations;
+using MementoPattern;
+using MementoPattern.Mementos;
+using Tester.Commands;
 
-namespace MementoPatternTester.ViewModels
+
+namespace Tester.ViewModels
 {
-    public class MainWindowViewModel: INotifyPropertyChanged
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
         private Caretaker Caretaker { get; }
         private Originator Originator { get; }
         public int _currentStatementCount = 1;
-        public int CurrentStatementCount {
+        public int CurrentStatementCount
+        {
             get => _currentStatementCount;
             set
             {
@@ -24,7 +27,8 @@ namespace MementoPatternTester.ViewModels
         }
 
         public string _currentStatement;
-        public string CurrentStatement {
+        public string CurrentStatement
+        {
             get => _currentStatement;
             set
             {
@@ -34,7 +38,7 @@ namespace MementoPatternTester.ViewModels
                     SaveCommand.RaiseCanExecuteChanged();
                     UndoCommand.RaiseCanExecuteChanged();
                     RedoCommand.RaiseCanExecuteChanged();
-                OnPropertyChanged();
+                    OnPropertyChanged();
                 }
             }
         }
@@ -115,5 +119,18 @@ namespace MementoPatternTester.ViewModels
 
         #endregion
 
+    }
+
+
+    [AttributeUsage(AttributeTargets.Method)]
+    public sealed class NotifyPropertyChangedInvocatorAttribute : Attribute
+    {
+        public NotifyPropertyChangedInvocatorAttribute() { }
+        public NotifyPropertyChangedInvocatorAttribute([NotNull] string parameterName)
+        {
+            ParameterName = parameterName;
+        }
+
+        public string ParameterName { get; }
     }
 }

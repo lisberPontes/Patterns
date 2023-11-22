@@ -1,6 +1,6 @@
 ﻿namespace MementoPattern.Mementos
 {
-    internal sealed class Memento: IMemento
+    public sealed class Memento: IMemento
     {
         public string Statement { get; }
 

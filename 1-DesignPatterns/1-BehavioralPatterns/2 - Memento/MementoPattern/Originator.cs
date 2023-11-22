@@ -2,7 +2,7 @@
 
 namespace MementoPattern
 {
-    internal sealed class Originator
+    public sealed class Originator
     {
         /// <summary>
         /// This is the state that we want to 'save/restore' and we don't want to expose

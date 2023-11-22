@@ -1,6 +1,6 @@
 ﻿namespace MementoPattern.Mementos
 {
-    internal sealed class NullMemento: IMemento
+    public sealed class NullMemento: IMemento
     {
         /// <summary>
         /// Null Object Pattern implementation
