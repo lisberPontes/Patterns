@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using WinFormClient.Entities.Alarms;
 
+
 namespace WinFormClient
 {
 	internal static class Program
