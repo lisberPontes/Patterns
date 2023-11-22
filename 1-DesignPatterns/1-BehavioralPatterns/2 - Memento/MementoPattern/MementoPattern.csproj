@@ -19,4 +19,8 @@
     <Folder Include="1 - Diagram\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.7.10" />
+  </ItemGroup>
+
 </Project>
