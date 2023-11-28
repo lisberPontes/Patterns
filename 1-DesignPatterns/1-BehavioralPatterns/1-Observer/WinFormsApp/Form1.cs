@@ -1,4 +1,6 @@
+using System;
 using System.Security.Claims;
+using System.Windows.Forms;
 using WinFormsApp.Entities.Alarms;
 using WinFormsApp.Entities.Devices;
 
